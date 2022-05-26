@@ -1,0 +1,63 @@
+.modal-content  {
+  border-radius: 0px !important;
+  border: 0px !important;
+}
+  .loading {
+    display: flex;
+    position: absolute;
+    left: 50%; 
+    transform: translateX(-50%);
+    background: transparent;
+    z-index: 9999;
+  }
+  .loading .dot {
+    position: relative;
+    margin: 0.8em;
+    border-radius: 50%;
+  }
+  .loading .dot::before {
+    position: absolute;
+    content: "";
+    background: inherit;
+    border-radius: inherit;
+    animation: wave 2s ease-out infinite;
+  }
+  .loading .dot:nth-child(1) {
+    background: #a1a1a1;
+  }
+  .loading .dot:nth-child(1)::before {
+    animation-delay: 0.2s;
+  }
+  .loading .dot:nth-child(2) {
+    background: #b1b1b1;
+  }
+  .loading .dot:nth-child(2)::before {
+    animation-delay: 0.4s;
+  }
+  .loading .dot:nth-child(3) {
+    background: #c1c1c1;
+  }
+  .loading .dot:nth-child(3)::before {
+    animation-delay: 0.6s;
+  }
+  .loading .dot:nth-child(4) {
+    background: #d1d1d1;
+  }
+  .loading .dot:nth-child(4)::before {
+    animation-delay: 0.8s;
+  }
+  .loading .dot:nth-child(5) {
+    background: #e1e1e1;
+  }
+  .loading .dot:nth-child(5)::before {
+    animation-delay: 1s;
+  }
+  
+  @keyframes wave {
+    50%, 75% {
+      transform: scale(2.5);
+    }
+    80%, 100% {
+      opacity: 0;
+    }
+  }
